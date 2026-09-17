@@ -33,6 +33,7 @@
   --orb-mask: none;
   --orb-shadow: 8px 8px 0 var(--line);
   --floor-opacity: 0;
+  --rays-opacity: 0.9;
 
   --font-display: "Bungee", "Arial Black", Impact, sans-serif;
   --font-pixel: "Press Start 2P", "Courier New", monospace;
@@ -66,6 +67,7 @@
   --orb-mask: linear-gradient(180deg, #000 52%, transparent 52%, transparent 57%, #000 57%, #000 66%, transparent 66%, transparent 71%, #000 71%, #000 79%, transparent 79%, transparent 85%, #000 85%);
   --orb-shadow: 0 0 60px rgba(255, 61, 154, 0.55);
   --floor-opacity: 0.45;
+  --rays-opacity: 0;
 }
 
 /* ---------- 3. Base ---------- */
@@ -197,6 +199,27 @@ code {
   animation: float 9s ease-in-out infinite;
 }
 
+/* spinning sun rays (day only). Same box as the sun, scaled up,
+   with the middle masked out so the rays sit around the disc */
+main::before {
+  content: "";
+  position: fixed;
+  top: 6rem;
+  right: -4.5rem;
+  z-index: -1;
+  width: clamp(9rem, 30vw, 22rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(var(--sun) 0deg 8deg, transparent 8deg 22.5deg);
+  -webkit-mask-image: radial-gradient(closest-side, transparent 61%, #000 62%, #000 92%, transparent 100%);
+  mask-image: radial-gradient(closest-side, transparent 61%, #000 62%, #000 92%, transparent 100%);
+  scale: 1.9;
+  opacity: var(--rays-opacity);
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  animation: float 9s ease-in-out infinite, spin 60s linear infinite;
+}
+
 /* neon grid floor (visible at night only) */
 .page::after {
   content: "";
@@ -225,6 +248,11 @@ main,
 .footer {
   position: relative;
   z-index: 1;
+}
+
+/* keep the ticker above the rays, which live inside <main> */
+.ticker {
+  z-index: 2;
 }
 
 .container {
@@ -1373,6 +1401,10 @@ main,
 
 @keyframes float {
   50% { transform: translateY(18px); }
+}
+
+@keyframes spin {
+  to { rotate: 360deg; }
 }
 
 @keyframes grid-run {
