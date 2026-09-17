@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="David Norman — Computer Science student and Front-End enthusiast. Digital business card.">
+  <title>David Norman · Player Card</title>
+  <link rel="icon" href="images/avatar.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme switch: a checkbox that sits before .page so CSS can restyle everything with "~" -->
+  <input type="checkbox" id="theme-switch" class="theme-switch">
+
+  <div class="page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="#top">DN<span>.exe</span></a>
+
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#about">Bio</a></li>
+            <li><a href="#skills">Stats</a></li>
+            <li><a href="#projects">Quests</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <label for="theme-switch" class="theme-toggle">
+          <span class="sr-only">Toggle dark mode</span>
+          <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__knob"></span></span>
+          <span class="theme-toggle__text" aria-hidden="true"><span class="theme-toggle__day">Day</span><span class="theme-toggle__night">Night</span></span>
+        </label>
+      </div>
+    </header>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>★ Press start</span><span>★ Open to internships</span><span>★ Front-end · UI · Web</span><span>★ Now loading: next level</span><span>★ High score: 9,999 commits</span>
+        <span>★ Press start</span><span>★ Open to internships</span><span>★ Front-end · UI · Web</span><span>★ Now loading: next level</span><span>★ High score: 9,999 commits</span>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ===== HERO ===== -->
+      <section class="hero container" id="top" aria-labelledby="hero-name">
+        <div class="hero__card card">
+          <figure class="avatar">
+            <span class="avatar__tag">P1</span>
+            <img src="images/avatar.svg" alt="Pixel-art portrait of David Norman" width="320" height="320">
+            <figcaption class="avatar__caption">LVL 27 · CS Student</figcaption>
+          </figure>
+
+          <div class="hero__info">
+            <p class="pixel-label"><span class="pulse-dot"></span> Player 1 — Ready</p>
+            <h1 id="hero-name">David Norman</h1>
+            <p class="role">Computer Science Student <span class="role__amp">&amp;</span> Front-End Enthusiast</p>
+            <p class="tagline">I turn coffee, curiosity and carefully crafted CSS into interfaces people actually enjoy clicking.</p>
+
+            <div class="xp">
+              <div class="xp__head"><span>XP to next level</span><span>72%</span></div>
+              <div class="xp__bar"><span></span></div>
+            </div>
+
+            <ul class="hero-stats">
+              <li><strong>12</strong><span>Projects shipped</span></li>
+              <li><strong>2</strong><span>Hackathon wins</span></li>
+              <li><strong>∞</strong><span>Cups of coffee</span></li>
+            </ul>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="https://github.com/davnor10" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+              </a>
+              <a class="btn btn--secondary" href="https://www.linkedin.com/in/im-david-norman/" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+              <a class="btn btn--ghost" href="#contact">Insert coin ↓</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="section container" id="about" aria-labelledby="about-title">
+        <header class="section-header">
+          <span class="section-header__number">01</span>
+          <h2 id="about-title">Player Bio</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__bio card">
+            <p>Hi! I'm David, a second-year <strong>Computer Science student</strong> who fell in love with the web the day I discovered that a few lines of CSS can make a button <em>feel</em> good to press. Since then I've been building things for the browser and chasing that feeling.</p>
+            <p>I enjoy the space where <strong>design meets code</strong>: responsive layouts, accessible components, small animations and design systems that stay tidy as they grow. Last summer I worked as a front-end intern on a React dashboard, and my team took first place at a campus hackathon with a student carpool app.</p>
+            <p>Outside the editor you'll find me playing retro games (hence this card), sketching UI ideas in Figma, or teaching friends that <code>display: grid</code> is not scary.</p>
+          </div>
+
+          <aside class="character-sheet card" aria-label="Character sheet">
+            <h3 class="character-sheet__title">Character Sheet</h3>
+            <dl>
+              <div><dt>Class</dt><dd>Front-End Mage</dd></div>
+              <div><dt>Guild</dt><dd>B.Sc. Computer Science</dd></div>
+              <div><dt>Base</dt><dd>Tel Aviv, Israel</dd></div>
+              <div><dt>Languages</dt><dd>Hebrew · English · Arabic</dd></div>
+              <div><dt>Special move</dt><dd>CSS PUNCH</dd></div>
+              <div><dt>Status</dt><dd><span class="badge badge--mint">Looking for a party</span></dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section class="section container" id="skills" aria-labelledby="skills-title">
+        <header class="section-header">
+          <span class="section-header__number">02</span>
+          <h2 id="skills-title">Stats &amp; Inventory</h2>
+        </header>
+
+        <div class="skills">
+          <div class="card skills__stats">
+            <h3 class="card__title">Core stats</h3>
+            <ul class="skill-bars">
+              <li><span class="skill-bars__label">HTML</span><span class="skill-bars__meter skill-bars__meter--95"><span></span></span><span class="skill-bars__value">95</span></li>
+              <li><span class="skill-bars__label">CSS</span><span class="skill-bars__meter skill-bars__meter--90"><span></span></span><span class="skill-bars__value">90</span></li>
+              <li><span class="skill-bars__label">JavaScript</span><span class="skill-bars__meter skill-bars__meter--80"><span></span></span><span class="skill-bars__value">80</span></li>
+              <li><span class="skill-bars__label">React</span><span class="skill-bars__meter skill-bars__meter--70"><span></span></span><span class="skill-bars__value">70</span></li>
+              <li><span class="skill-bars__label">Git</span><span class="skill-bars__meter skill-bars__meter--75"><span></span></span><span class="skill-bars__value">75</span></li>
+              <li><span class="skill-bars__label">Node.js</span><span class="skill-bars__meter skill-bars__meter--60"><span></span></span><span class="skill-bars__value">60</span></li>
+            </ul>
+          </div>
+
+          <div class="card skills__inventory">
+            <h3 class="card__title">Inventory</h3>
+            <ul class="tool-grid">
+              <li><span class="tool-grid__icon">⌨️</span>VS Code</li>
+              <li><span class="tool-grid__icon">☸️</span>Kubernetes</li>
+              <li><span class="tool-grid__icon">🟦</span>TypeScript</li>
+              <li><span class="tool-grid__icon">🐍</span>Python</li>
+              <li><span class="tool-grid__icon">🗄️</span>SQL</li>
+              <li><span class="tool-grid__icon">🐧</span>Linux</li>
+              <li><span class="tool-grid__icon">🐳</span>Docker</li>
+              <li><span class="tool-grid__icon">☕</span>Java</li>
+            </ul>
+
+            <h3 class="card__title card__title--spaced">Power-ups</h3>
+            <ul class="tags">
+              <li>Teamwork</li>
+              <li>Fast learner</li>
+              <li>Accessibility</li>
+              <li>Clean code</li>
+              <li>Problem solving</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section class="section container" id="projects" aria-labelledby="projects-title">
+        <header class="section-header">
+          <span class="section-header__number">03</span>
+          <h2 id="projects-title">Quest Log</h2>
+        </header>
+
+        <div class="projects">
+          <article class="project project--featured card">
+            <header class="project__header">
+              <span class="project__icon project__icon--blue" aria-hidden="true">🏴‍☠️</span>
+              <span class="badge badge--sun">Open source · v0.7</span>
+            </header>
+            <h3>Archives of Ohara</h3>
+            <p class="project__difficulty">Difficulty <span class="stars" aria-label="5 out of 5">★★★★★</span></p>
+            <p>A desktop media library for your local TV shows and movies. Built-in player with on-the-fly ffmpeg transcoding, subtitles and multiple audio tracks, TMDB posters and ratings, watch tracking and a randomizer that picks your next episode.</p>
+            <ul class="tags"><li>Electron</li><li>React</li><li>TypeScript</li><li>SQLite</li><li>ffmpeg</li></ul>
+            <footer class="project__links">
+              <a href="https://github.com/davnor10/archives-of-ohara" target="_blank" rel="noopener noreferrer">Source ↗</a>
+              <a href="https://github.com/davnor10/archives-of-ohara/releases" target="_blank" rel="noopener noreferrer">Download ↗</a>
+            </footer>
+          </article>
+
+          <article class="project card">
+            <header class="project__header">
+              <span class="project__icon project__icon--pink" aria-hidden="true">🍜</span>
+              <span class="badge badge--mint">Completed</span>
+            </header>
+            <h3>Pixel Pantry</h3>
+            <p class="project__difficulty">Difficulty <span class="stars" aria-label="3 out of 5">★★★<span>★★</span></span></p>
+            <p>A recipe finder that suggests meals from whatever is left in your fridge. Search, filters and a favorites list, backed by a public recipes API.</p>
+            <ul class="tags"><li>React</li><li>REST API</li><li>CSS Modules</li></ul>
+            <footer class="project__links">
+              <a href="https://github.com/davnor10/pixel-pantry" target="_blank" rel="noopener noreferrer">Source ↗</a>
+              <a href="https://davnor10.github.io/pixel-pantry" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </footer>
+          </article>
+
+          <article class="project card">
+            <header class="project__header">
+              <span class="project__icon project__icon--blue" aria-hidden="true">📚</span>
+              <span class="badge badge--mint">Completed</span>
+            </header>
+            <h3>StudyQuest</h3>
+            <p class="project__difficulty">Difficulty <span class="stars" aria-label="4 out of 5">★★★★<span>★</span></span></p>
+            <p>A gamified study planner: finish tasks, earn XP, keep your streak alive. Includes user accounts and a weekly progress dashboard.</p>
+            <ul class="tags"><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
+            <footer class="project__links">
+              <a href="https://github.com/davnor10/study-quest" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </footer>
+          </article>
+
+          <article class="project card">
+            <header class="project__header">
+              <span class="project__icon project__icon--mint" aria-hidden="true">🐍</span>
+              <span class="badge badge--mint">Completed</span>
+            </header>
+            <h3>Neon Snake</h3>
+            <p class="project__difficulty">Difficulty <span class="stars" aria-label="2 out of 5">★★<span>★★★</span></span></p>
+            <p>The classic snake game reimagined with a synthwave look, keyboard and touch controls, and a local high-score table.</p>
+            <ul class="tags"><li>JavaScript</li><li>Canvas</li><li>Game loop</li></ul>
+            <footer class="project__links">
+              <a href="https://github.com/davnor10/neon-snake" target="_blank" rel="noopener noreferrer">Source ↗</a>
+              <a href="https://davnor10.github.io/neon-snake" target="_blank" rel="noopener noreferrer">Play ↗</a>
+            </footer>
+          </article>
+
+          <article class="project card">
+            <header class="project__header">
+              <span class="project__icon project__icon--sun" aria-hidden="true">🚗</span>
+              <span class="badge badge--sun">In progress</span>
+            </header>
+            <h3>CampusRide</h3>
+            <p class="project__difficulty">Difficulty <span class="stars" aria-label="5 out of 5">★★★★★</span></p>
+            <p>Hackathon winner 🏆 A carpool matcher for students commuting to campus, matching routes and class schedules to fill empty seats.</p>
+            <ul class="tags"><li>TypeScript</li><li>React</li><li>Maps API</li></ul>
+            <footer class="project__links">
+              <a href="https://github.com/davnor10/campus-ride" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== JOURNEY ===== -->
+      <section class="section container" id="journey" aria-labelledby="journey-title">
+        <header class="section-header">
+          <span class="section-header__number">04</span>
+          <h2 id="journey-title">Save Points</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <time class="timeline__year" datetime="2026">2026</time>
+            <article class="card timeline__card">
+              <h3>1st Place · Campus Hackathon</h3>
+              <p>Built CampusRide in 36 hours with a team of four. I led the UI and the matching screen.</p>
+            </article>
+          </li>
+          <li class="timeline__item">
+            <time class="timeline__year" datetime="2025">2025</time>
+            <article class="card timeline__card">
+              <h3>Front-End Intern · Bytebloom</h3>
+              <p>Built reusable React components for an analytics dashboard and improved its mobile layout and accessibility score.</p>
+            </article>
+          </li>
+          <li class="timeline__item">
+            <time class="timeline__year" datetime="2024">2024</time>
+            <article class="card timeline__card">
+              <h3>B.Sc. Computer Science · Start</h3>
+              <p>Started my degree. Favorite courses so far: Web Applications, Data Structures and Human-Computer Interaction.</p>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="section container" id="contact" aria-labelledby="contact-title">
+        <header class="section-header">
+          <span class="section-header__number">05</span>
+          <h2 id="contact-title">Insert Coin</h2>
+        </header>
+
+        <div class="contact card">
+          <p class="contact__continue" aria-hidden="true">Continue? <span class="countdown"></span></p>
+          <p class="contact__lead">Want to start a co-op mission? Pick a controller and let's talk.</p>
+
+          <ul class="contact__grid">
+            <li>
+              <a class="contact__tile" href="mailto:david.norman.dev@example.com">
+                <svg class="icon icon--stroke" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                <span class="contact__label">Email</span>
+                <span class="contact__value">david.norman.dev<wbr>@example.com</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact__tile" href="tel:+972501234567">
+                <svg class="icon icon--stroke" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+                <span class="contact__label">Phone</span>
+                <span class="contact__value">050-123-4567</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact__tile" href="https://github.com/davnor10" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                <span class="contact__label">GitHub</span>
+                <span class="contact__value">@davnor10</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact__tile" href="https://www.linkedin.com/in/im-david-norman/" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span class="contact__label">LinkedIn</span>
+                <span class="contact__value">in/im-david-norman</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© 2026 David Norman · Built with HTML &amp; CSS only - and the blessing of the Claude gods. No JavaScript was harmed.</p>
+        <a href="#top" class="footer__back-to-top">Back to top ↑</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
